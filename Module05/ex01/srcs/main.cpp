@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:21:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/05 09:13:47 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/11 10:19:50 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int main()
 			Form		form5("BP14", 100, 130);
 
 			form5.beSigned(bureaucrat1);
-			//bureaucrat1.signForm(form4);
+			// bureaucrat1.signForm(form4);
 		}
 	
 		catch (Bureaucrat::GradeTooHighException &e)
