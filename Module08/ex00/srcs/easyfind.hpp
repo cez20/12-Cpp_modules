@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 21:30:13 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/11/07 21:42:04 by cemenjiv         ###   ########.fr       */
+/*   Created: 2023/11/23 19:41:07 by cemenjiv          #+#    #+#             */
+/*   Updated: 2023/11/26 21:23:29 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
-template < typename T>
-void iter(T* tab, std::size_t size, void (*f)(T &))
-{
-    for (size_t i = 0; i < size; i++)
-    {
-        f(tab[i]);
-    }
-}
+#include <algorithm>
+#include <iostream>
+#include <stdexcept>
 
 template < typename T >
-void    print_content(T & element)
+void easyfind(T & a, int b)
 {
-    std::cout << element << std::endl;
+	typename T::iterator res = std::find(a.begin(), a.end(), b);
+
+	if(res != a.end())
+		std::cout << "Value " << b << " was found!"<< std::endl;
+	else
+		std::cout << "Value " << b << " was NOT found!"<< std::endl;
 }
 
+#endif

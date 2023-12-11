@@ -6,14 +6,14 @@
 #    By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 17:54:38 by cemenjiv          #+#    #+#              #
-#    Updated: 2023/11/07 21:39:10 by cemenjiv         ###   ########.fr        #
+#    Updated: 2023/11/30 22:20:38 by cemenjiv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= iter
+NAME			= range
 
 SRCS_DIR   		= srcs/
-SRCS_FILES		= main.cpp
+SRCS_FILES		= main.cpp Span.cpp
 SRCS 			= $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 OBJS_DIR		= objs/
