@@ -125,5 +125,12 @@ void	Bureaucrat::printData() const
 				<< "Bureaucrat's grade: " << getGrade() << "\n\n";
 }
 
+const char*	Bureaucrat::GradeTooHighException::what() const throw() {
+	return "Exception Bureaucrat: Grade is too High";
+}
+
+const char*	Bureaucrat::GradeTooLowException::what() const throw() {
+	return "Exception Bureaucrat: Grade is too Low";
+}
 
 /* ************************************************************************** */

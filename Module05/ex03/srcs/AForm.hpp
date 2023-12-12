@@ -32,27 +32,18 @@ class AForm
 		class GradeTooHighException: public std::exception 
 		{
 			public:
-				const char* what() const throw()
-				{
-					return ("Grade is too HIGH");
-				}
+				const char* what() const throw();
 		};
 
 		class GradeTooLowException: public std::exception
 		{
 			public:
-				const char* what() const throw()
-				{
-					return ("Grade is too LOW");
-				}
+				const char* what() const throw();
 		};
 		class isNotSigned: public std::exception
 		{
 			public:
-				const char* what() const throw()
-				{
-					return ("Form is NOT signed");
-				}
+				const char* what() const throw();
 		};
 
 	private:

@@ -7,18 +7,18 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm(): AForm ("Shrubbery", "target", 145, 137)
 {
-	std::cout << "[SHRUBBERY DEFAULT CONSTRUCTOR] Default construtor is called" << std::endl;
+	std::cout << "[SHRUBBERY DEFAULT CONSTRUCTOR] Default constructor is called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target): AForm ("Shrubbery", target, 145, 137)
 {
-	std::cout << "[SHRUBBERY CONSTRUCTOR W/ ARG] Construtor with arguments  is called" << std::endl;
+	std::cout << "[SHRUBBERY CONSTRUCTOR W/ ARG] Constructor with arguments  is called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm & src )
 : AForm("Shrubbery", src.getTarget(), 145, 137)
 {
-	std::cout << "[SHRUBBERY COPY CONSTRUCTOR] Copy construtor is called" << std::endl;
+	std::cout << "[SHRUBBERY COPY CONSTRUCTOR] Copy constructor is called" << std::endl;
 	*this = src;
 }
 

@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:08:46 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/05 08:20:14 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:03:33 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,12 @@ class Form
 		class GradeTooHighException: public std::exception
 		{
 			public:
-				virtual const char* what() const throw()  //(voir Explication plus haut)
-				{
-					return ("Grade is too HIGH");
-				}
+				virtual const char* what() const throw();
 		};
 		class GradeTooLowException: public std::exception
 		{
 			public:
-				virtual const char* what() const throw()  //(voir Explication plus haut)
-				{
-					return ("Grade is too LOW");
-				}
+				virtual const char* what() const throw();
 		};
 
 	private:

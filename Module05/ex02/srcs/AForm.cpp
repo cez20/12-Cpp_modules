@@ -87,20 +87,18 @@ void	AForm::isFormExecutable(Bureaucrat const & executor) const
 		throw AForm::GradeTooLowException();	
 }
 
-// const char* AForm::GradeTooHighException::what() const throw()
-// {
-// 	return ("Grade is too HIGH");
-// }
+const char* AForm::GradeTooHighException::what() const throw() {
+	return "Exception Form: Grade is too High";
+}
 
-// const char* AForm::GradeTooLowException::what() const throw()
-// {
-// 	return ("Grade is too LOW");
-// }
+const char* AForm::GradeTooLowException::what() const throw() {
+	return "Exception Form: Grade is too Low";
+}
 
-// const char* AForm::isNotSigned::what() const throw()
-// {
-// 	return ("Form is NOT signed");
-// }
+const char* AForm::isNotSigned::what() const throw()
+{
+	return ("Exception Form: Form is NOT signed");
+}
 
 void	AForm::printData() const
 {
@@ -110,7 +108,6 @@ void	AForm::printData() const
 				<< "Grade to Sign: " << getGradeToSign() << "\n"
 				<< "Grade to Execute: " << getGradeToExecute() << "\n\n";
 }
-
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

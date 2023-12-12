@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:08:42 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/05 08:21:34 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:50:49 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,12 @@ class Bureaucrat
 		class GradeTooHighException: public std::exception
 		{
 			public:
-				virtual const char* what() const throw()  //(voir Explication plus haut)
-				{
-					return ("Grade is too HIGH");
-				}
+				virtual const char* what() const throw();
 		};
 		class GradeTooLowException: public std::exception
 		{
 			public:
-				virtual const char* what() const throw()  //(voir Explication plus haut)
-				{
-					return ("Grade is too LOW");
-				}
+				virtual const char* what() const throw();
 		};
 };
 

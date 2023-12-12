@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:21:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/07 07:10:20 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/12 15:04:07 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,6 @@
 int main()
 {
 	std::cout << GRN"*************************************************************************************" RESET << std::endl;
-	std::cout << GRN"*                             TESTING BUREAUCRAT LEVELS                             *" RESET << std::endl;
-	std::cout << GRN"*************************************************************************************" RESET << std::endl;
-
-	try{
-		Bureaucrat bureaucrat1("Francis", 151);
-	}catch(std::exception & e){
-		std::cout << "Exception: " << e.what() << "\n\n";
-	}
-	
-	try{
-		Bureaucrat bureaucrat2("Robert", 0);
-	}catch(std::exception & e){
-		std::cout << "Exception: " << e.what() << "\n\n";
-	}
-
-	std::cout << GRN"*************************************************************************************" RESET << std::endl;
 	std::cout << GRN"*                             TESTING INSTANCIATION OF SHRUBBERY                    *" RESET << std::endl;
 	std::cout << GRN"*************************************************************************************" RESET << std::endl;
 
@@ -59,13 +43,7 @@ int main()
 		bureaucrat3.executeForm(shrubbery1);
 		bureaucrat3.printData();
 		shrubbery1.printData();
-	
-		Bureaucrat bureaucrat4("Cesar", 150);
-		ShrubberyCreationForm shrubbery2("garden");
-		bureaucrat4.signAForm(shrubbery2); //Can be commented to see other error
-		bureaucrat4.executeForm(shrubbery2);
-		bureaucrat4.printData();
-		shrubbery2.printData();
+
 	}
 
 	std::cout << GRN"*************************************************************************************" RESET << std::endl;
@@ -101,13 +79,6 @@ int main()
 	bureaucrat7.printData();
 	president1.printData();	
 
-	Bureaucrat bureaucrat8("Cesar", 26);
-	PresidentialPardonForm president2("Albert");
-	bureaucrat8.signAForm(president2); //Can be commented to see other error
-	bureaucrat8.executeForm(president2);
-	bureaucrat8.printData();
-	president2.printData();	
-	
 	return (0);
 }
 

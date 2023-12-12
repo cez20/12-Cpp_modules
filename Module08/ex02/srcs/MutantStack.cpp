@@ -18,7 +18,6 @@ MutantStack<T>::MutantStack( const MutantStack<T> & src )
 	*this = src;
 }
 
-
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
@@ -29,7 +28,6 @@ MutantStack<T>::~MutantStack()
 	std::cout << "[DESTRUCTOR] has been called" << std::endl;
 
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------

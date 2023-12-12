@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:21:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/12/11 10:19:50 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/12 14:58:49 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,27 +34,14 @@ int main()
 
 		try {
 			Form form3 ("AG14", 151, 45);
+		}catch (std::exception & e){
+			std::cerr << e.what() << std::endl;
 		}
 
-		catch (Bureaucrat::GradeTooHighException &e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;	
-		}
-		catch(Bureaucrat::GradeTooLowException & e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;
-		}
-		catch (Form::GradeTooHighException &e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;	
-		}
-		catch(Form::GradeTooLowException & e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;
-		}
-		catch (std::exception e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;
+		try {
+			Form form44 ("AG14", 0, 125);
+		}catch (std::exception & e){
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -63,35 +50,15 @@ int main()
 		std::cout << GRN"*                    TESTING BeSigned() and signForm() functions                    *" RESET << std::endl;
 		std::cout << GRN"*************************************************************************************" RESET << std::endl;
 
-		try
-		{
+		try{
 			Bureaucrat	bureaucrat1("Roger", 100);
-			Form		form4("BP13", 99, 99);
-			Form		form5("BP14", 100, 130);
-
+			Form		form4("BP13", 100, 130);
+			Form		form5("BP14", 99, 99);
+		
+			bureaucrat1.signForm(form4);
 			form5.beSigned(bureaucrat1);
-			// bureaucrat1.signForm(form4);
-		}
-	
-		catch (Bureaucrat::GradeTooHighException &e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;	
-		}
-		catch(Bureaucrat::GradeTooLowException & e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;
-		}
-		catch (Form::GradeTooHighException &e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;	
-		}
-		catch(Form::GradeTooLowException & e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;
-		}
-		catch (std::exception e)
-		{
-			std::cout << "Form Exception: " << e.what() << std::endl;
+		} catch (std::exception & e){
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	return (0);

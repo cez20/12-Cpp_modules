@@ -6,12 +6,11 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:08:38 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/05 08:42:31 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:33:23 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -112,12 +111,20 @@ unsigned int const & Form::getGradeToExecute() const
 	return (this->_gradeToExecute);
 }
 
+const char* Form::GradeTooHighException::what() const throw() {
+	return "Exception Form: Grade is too High";
+}
+
+const char* Form::GradeTooLowException::what() const throw() {
+	return "Exception Form: Grade is too Low";
+}
+
 /* ************************************************************************** */
 
 std::ostream &			operator<<( std::ostream & o, Form const & form)
 {
 	o << "Form Name: " << form.getName() << std::endl;
-	o << "Form is signed? : " << form.getSignStatus() << std::endl;
+	o << "Form is signed? : " << std::boolalpha << form.getSignStatus() << std::endl;
 	o << "Minimum grade needed for Form to be signed: " << form.getGradeToSign() << std::endl;
 	o << "Minimum grade needed for Form to be executed: " << form.getGradeToExecute() << std::endl;
 	return o;

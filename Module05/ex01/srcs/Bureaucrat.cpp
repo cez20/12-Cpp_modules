@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:08:34 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/05 08:41:51 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:05:06 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,15 @@ void			Bureaucrat::signForm(Form & f)
 {
 	f.beSigned(*this);
 }
+
+const char*	Bureaucrat::GradeTooHighException::what() const throw() {
+	return "Exception Bureaucrat: Grade is too High";
+}
+
+const char*	Bureaucrat::GradeTooLowException::what() const throw() {
+	return "Exception Bureaucrat: Grade is too Low";
+}
+
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

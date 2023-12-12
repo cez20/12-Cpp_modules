@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:21:23 by cemenjiv          #+#    #+#             */
-/*   Updated: 2023/07/03 12:02:32 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:17:51 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,17 @@ int main()
 	{
 		try{
 			Bureaucrat("Robert", 0);	
-		} catch (Bureaucrat::GradeTooHighException &e){
-			std::cout << "Exception: " << e.what() << std::endl;	
-		}
-		catch(Bureaucrat::GradeTooLowException & e){
-			std::cout << "Exception: " << e.what() << std::endl;
-		}
-		catch (std::exception e){
-			std::cout << "Exception: " << e.what() << std::endl;
+		} catch (std::exception & e){
+			std::cerr << "Exception: " << e.what() << std::endl;
 		}
 	}
+	
 	{
 		try{
 			Bureaucrat("Robert", 151);	
-		} catch (Bureaucrat::GradeTooHighException &e){
-			std::cout << "Exception: " << e.what() << std::endl;	
 		}
-		catch(Bureaucrat::GradeTooLowException & e){
-			std::cout << "Exception: " << e.what() << std::endl;
-		}
-		catch (std::exception e){
-			std::cout << "Exception: " << e.what() << std::endl;
+		catch (std::exception & e){
+			std::cerr << "Exception: " << e.what() << std::endl;
 		}
 	}
 
@@ -59,28 +49,17 @@ int main()
 		try{
 			Bureaucrat bureaucrat1("Robert", 1);
 			bureaucrat1.increaseGrade();
-		} catch (Bureaucrat::GradeTooHighException &e){
-			std::cout << "Exception: " << e.what() << std::endl;	
-		}
-		catch(Bureaucrat::GradeTooLowException & e){
-			std::cout << "Exception: " << e.what() << std::endl;
-		}
-		catch (std::exception e){
-			std::cout << "Exception: " << e.what() << std::endl;
+		} 
+		catch (std::exception & e){
+			std::cerr << "Exception: " << e.what() << std::endl;
 		}
 	}
 	{
 		try{
 			Bureaucrat bureaucrat("Cesar", 150);
 			bureaucrat.decreaseGrade();
-		}catch (Bureaucrat::GradeTooHighException &e){
-			std::cout << "Exception: " << e.what() << std::endl;	
-		}
-		catch(Bureaucrat::GradeTooLowException & e){
-			std::cout << "Exception: " << e.what() << std::endl;
-		}
-		catch (std::exception e){
-			std::cout << "Exception: " << e.what() << std::endl;
+		}catch (std::exception & e){
+			std::cerr << "Exception: " << e.what() << std::endl;
 		}
 	}
 	
